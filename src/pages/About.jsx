@@ -1,15 +1,40 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import heroAboutImg from '../assets/images/hero-about.jpg'
+
+const teamMembers = [
+  {
+    name: 'Capt. Mornel Brown',
+    title: 'Founder & CEO',
+    image: '/team/Capt%20Mornel.jpg',
+    points: [
+      '9,500+ flight hours',
+      '16+ years of aviation experience',
+      'Dedicated to building a professional, safety-focused airline for The Bahamas'
+    ]
+  },
+  {
+    name: 'Capt. Hensel Bullard',
+    title: 'Chief Pilot',
+    image: '/team/Capt%20Hensel%20Bullard.jpg',
+    points: [
+      '10,500+ flight hours',
+      '30+ years of commercial aviation experience',
+      'Ensuring the highest standards of training and operational excellence'
+    ]
+  }
+];
+// removed heroAboutImg import
 import heroMainImg from '../assets/images/hero-main.jpg'
 import bahamasAerialImg from '../assets/images/bahamas-aerial.jpg'
 
 export default function About() {
+  const [activeTeamIndex, setActiveTeamIndex] = useState(0);
   return (
     <div className="page-enter">
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero-bg">
-          <img src={heroAboutImg} alt="Zipline Express crew" />
+          <img src="/Landing Page Banner/improved_cessna.jpg" alt="Zipline Express crew" />
         </div>
         <div className="hero-overlay"></div>
         <div className="page-hero-content">
@@ -25,28 +50,72 @@ export default function About() {
           <div className="about-content">
             <div className="about-text">
               <span className="section-label">Who We Are</span>
-              <h2 className="section-title">Your Trusted Partner in Bahamian Aviation</h2>
+              <h2 className="section-title">About Us</h2>
               <p>
-                Zipline Express is a Bahamian air charter and scheduled passenger service 
-                operator based at Lynden Pindling International Airport in Nassau. For over 
-                15 years, we have been providing safe, reliable air travel across the islands 
-                of The Bahamas and beyond.
+                Operating since 2017, we've built a strong reputation with our loyal customers for safety, service, and reliability. What began as a dedicated private charter operation has grown into a well-established Bahamian aviation company. 
               </p>
               <p>
-                Our team of experienced aviation professionals is dedicated to delivering 
-                the highest standards of safety, customer care, and operational excellence. 
-                Whether you're flying on one of our scheduled passenger routes or chartering 
-                a private flight, you can trust that every aspect of your journey has been 
-                carefully managed.
+                While our scheduled passenger service is a new offering designed to better connect the islands, the foundation of our company remains the same. Whether you are flying on a scheduled route or a private charter, we will ensure your satisfaction with every flight!
               </p>
               <p>
-                We are proud to now offer scheduled passenger services alongside our 
-                established private charter operations, giving travellers more ways to 
-                experience the beauty and diversity of The Bahamas.
+                Safety is our number one priority, and our flight crew—including founders with decades of expertise—brings over 30 years of combined experience in flying and operating optimally safe flights. Our aircraft are maintained to the highest standard of manufacturer maintenance requirements. We adhere strictly to the rules and regulations that govern the aviation industry in The Bahamas and elsewhere.
               </p>
             </div>
             <div className="about-image">
               <img src={heroMainImg} alt="Zipline Express aircraft over the Bahamas" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership */}
+      <section className="section section-navy" id="about-leadership">
+        <div className="container">
+          <div className="text-center">
+            <span className="section-label" style={{ color: 'var(--color-gold)' }}>Our Team</span>
+            <h2 className="section-title" style={{ color: 'var(--color-white)' }}>Aviation Leadership</h2>
+            <p className="section-subtitle" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+              Guided by decades of commercial aviation experience and a commitment to operational excellence.
+            </p>
+          </div>
+
+          <div style={{ maxWidth: '1000px', margin: 'var(--space-2xl) auto 0', background: 'rgba(255,255,255,0.05)', borderRadius: 'var(--radius-xl)', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+              <div style={{ flex: '1 1 400px', minHeight: '400px', maxHeight: '600px' }}>
+                <img 
+                  src={teamMembers[activeTeamIndex].image} 
+                  alt={teamMembers[activeTeamIndex].name} 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+                />
+              </div>
+              <div style={{ flex: '1 1 400px', padding: 'var(--space-2xl)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <h3 style={{ color: 'var(--color-white)', marginBottom: 'var(--space-xs)', fontSize: 'var(--text-3xl)' }}>{teamMembers[activeTeamIndex].name}</h3>
+                <div style={{ color: 'var(--color-gold)', fontWeight: 600, marginBottom: 'var(--space-xl)', fontSize: 'var(--text-lg)' }}>{teamMembers[activeTeamIndex].title}</div>
+                <ul style={{ color: 'rgba(255, 255, 255, 0.8)', listStyleType: 'none', padding: 0, margin: '0 0 var(--space-2xl) 0', display: 'flex', flexDirection: 'column', gap: 'var(--space-md)', textAlign: 'left' }}>
+                  {teamMembers[activeTeamIndex].points.map((point, idx) => (
+                    <li key={idx} style={{ fontSize: 'var(--text-lg)' }}>{point}</li>
+                  ))}
+                </ul>
+                <div style={{ display: 'flex', gap: 'var(--space-md)', marginTop: 'auto' }}>
+                  {teamMembers.map((_, idx) => (
+                    <button 
+                      key={idx}
+                      onClick={() => setActiveTeamIndex(idx)}
+                      style={{ 
+                        width: '40px', 
+                        height: '4px', 
+                        borderRadius: '2px', 
+                        background: activeTeamIndex === idx ? 'var(--color-gold)' : 'rgba(255,255,255,0.3)',
+                        transition: 'background 0.3s ease',
+                        cursor: 'pointer',
+                        border: 'none',
+                        padding: 0
+                      }}
+                      aria-label={`View ${teamMembers[idx].name}`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -60,51 +129,11 @@ export default function About() {
             <h2 className="section-title">Our Values</h2>
           </div>
 
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <h4>Safety Above All</h4>
-              <p>
-                Safety is not just a policy — it's the foundation of every decision 
-                we make. From aircraft maintenance to crew training, every aspect of 
-                our operation prioritises the wellbeing of our passengers and team.
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              </div>
-              <h4>Operational Excellence</h4>
-              <p>
-                We hold ourselves to the highest professional operating standards. 
-                Our maintenance programmes exceed regulatory requirements, and our 
-                crew undergoes continuous training and assessment.
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              </div>
-              <h4>Reliability</h4>
-              <p>
-                Our passengers depend on us, and we take that responsibility seriously. 
-                Consistent schedules, well-maintained aircraft, and a team that shows 
-                up ready — every time.
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              </div>
-              <h4>Customer First</h4>
-              <p>
-                From the moment you enquire to the moment you land, we are focused 
-                on making your experience smooth, comfortable, and enjoyable. Your 
-                satisfaction is our success.
-              </p>
-            </div>
+          <div className="text-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h3 style={{ fontSize: 'var(--text-2xl)', marginBottom: 'var(--space-md)' }}>Why Zipline?</h3>
+            <p style={{ fontSize: 'var(--text-lg)', lineHeight: '1.8' }}>
+              You come first. The protection and safekeeping of our clients and team are our first priority for all our operations and services. We always strive to ensure superior standards. We seek to offer our personnel a first-rate working environment and reward them for exceptional performance. We endeavor to uphold the highest code of conduct in all our business relationships. We seek to behave conscientiously towards humanity and the environment.
+            </p>
           </div>
         </div>
       </section>
@@ -117,10 +146,7 @@ export default function About() {
               <span className="section-label">Our Standards</span>
               <h2 className="section-title">Safety & Maintenance</h2>
               <p>
-                At Zipline Express, we believe that world-class safety standards are 
-                non-negotiable. Our aircraft maintenance programmes are designed to 
-                meet and exceed all regulatory requirements set by the Bahamas Civil 
-                Aviation Authority.
+                Safety is our number one priority and our flight crew has over 30 years' experience in flying and operating optimally safe flights. Our aircraft are maintained to the highest standard of manufacturer maintenance requirements. We adhere strictly to the rules and regulations that govern the aviation industry in the Bahamas and elsewhere.
               </p>
               <div className="safety-points">
                 <div className="safety-point">
@@ -164,20 +190,20 @@ export default function About() {
         <div className="container">
           <div className="stats-bar">
             <div className="stat-item">
-              <div className="stat-number">15+</div>
-              <div className="stat-label">Years of Service</div>
+              <div className="stat-number">32,400+</div>
+              <div className="stat-label">Passengers Transported</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">2</div>
-              <div className="stat-label">Aircraft Types</div>
+              <div className="stat-number">2,700+</div>
+              <div className="stat-label">Commercial Flights</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">700+</div>
-              <div className="stat-label">Islands Accessible</div>
+              <div className="stat-number">2017</div>
+              <div className="stat-label">Operating Since</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">100%</div>
-              <div className="stat-label">Safety Commitment</div>
+              <div className="stat-number">20,000+</div>
+              <div className="stat-label">Combined Senior Pilot Hours</div>
             </div>
           </div>
         </div>

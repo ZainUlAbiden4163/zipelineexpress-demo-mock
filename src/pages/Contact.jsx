@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import heroContactImg from '../assets/images/hero-contact.jpg'
+// removed heroContactImg import
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -23,7 +23,7 @@ export default function Contact() {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero-bg">
-          <img src={heroContactImg} alt="Zipline Express customer service" />
+          <img src="/Landing Page Banner/improved_ships.jpg" alt="Zipline Express customer service" />
         </div>
         <div className="hero-overlay"></div>
         <div className="page-hero-content">

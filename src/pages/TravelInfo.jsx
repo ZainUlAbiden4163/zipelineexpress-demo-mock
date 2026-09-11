@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import bahamasAerialImg from '../assets/images/bahamas-aerial.jpg'
+// removed bahamasAerialImg import
 
 export default function TravelInfo() {
   const [openFaq, setOpenFaq] = useState(null)
@@ -49,7 +49,7 @@ export default function TravelInfo() {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero-bg">
-          <img src={bahamasAerialImg} alt="Bahamas islands aerial view" />
+          <img src="/Landing Page Banner/improved_person_rock.jpg" alt="Bahamas islands aerial view" />
         </div>
         <div className="hero-overlay"></div>
         <div className="page-hero-content">

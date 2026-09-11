@@ -1,5 +1,16 @@
 import { Link } from 'react-router-dom'
 import heroMainImg from '../assets/images/hero-main.jpg'
+
+const galleryDestinations = [
+  { name: 'Abaco', image: '/Where%20we%20Fly/Abaco.jpg' },
+  { name: 'Bimini', image: '/Where%20we%20Fly/Bimini.jpg' },
+  { name: 'Cat Island', image: '/Where%20we%20Fly/Cat%20Island.jpg' },
+  { name: 'Eleuthera', image: '/Where%20we%20Fly/Eleuthera.jpg' },
+  { name: 'Exuma', image: '/Where%20we%20Fly/Exuma.jpg' },
+  { name: 'Inagua', image: '/Where%20we%20Fly/Inagua.jpg' },
+  { name: 'Nassau', image: '/Where%20we%20Fly/Nassau.jpg' },
+  { name: 'Staniel Cay', image: '/Where%20we%20Fly/Staniel%20Cay.jpg' }
+];
 import heroScheduledImg from '../assets/images/hero-scheduled.jpg'
 import heroCharterImg from '../assets/images/hero-charter.jpg'
 import heroAboutImg from '../assets/images/hero-about.jpg'
@@ -10,7 +21,7 @@ export default function Home() {
       {/* ===== HERO ===== */}
       <section className="hero" id="home-hero">
         <div className="hero-bg">
-          <img src={heroMainImg} alt="Zipline Express aircraft flying over the Bahamas" />
+          <img src="/Landing%20Page%20Banner/staniel-cay-bahamas-flights-tours%20copy.jpg" alt="Zipline Express aircraft flying over the Bahamas" />
         </div>
         <div className="hero-overlay"></div>
         <div className="hero-content">
@@ -20,7 +31,7 @@ export default function Home() {
             <em>The Bahamas</em>
           </h1>
           <p className="hero-text">
-            Safe, reliable air travel connecting the islands. Scheduled passenger 
+            An established Bahamian airline operating since 2017. Scheduled passenger 
             flights and private charter services — your journey starts here.
           </p>
           <div className="hero-actions">
@@ -99,7 +110,7 @@ export default function Home() {
         <div className="container">
           <div className="text-center">
             <span className="section-label">Scheduled Routes</span>
-            <h2 className="section-title">Where We Fly</h2>
+            <h2 className="section-title">Our Scheduled Routes</h2>
             <p className="section-subtitle">
               Connecting the islands of The Bahamas with regular, reliable service.
             </p>
@@ -189,8 +200,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== PHOTO DESTINATIONS ===== */}
+      <section className="section" id="destinations-gallery">
+        <div className="container">
+          <div className="text-center">
+            <span className="section-label">Explore The Bahamas</span>
+            <h2 className="section-title">Where We Fly</h2>
+            <p className="section-subtitle">
+              From popular hubs to remote island paradises, our charter and scheduled services connect you to the breathtaking beauty of the Caribbean.
+            </p>
+          </div>
+
+          <div className="collage-gallery">
+            {galleryDestinations.map((dest) => (
+              <div className="collage-item" key={dest.name}>
+                <img src={dest.image} alt={dest.name} />
+                <div className="collage-overlay">
+                  <h3 className="collage-title">{dest.name}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center" style={{ marginTop: 'var(--space-2xl)' }}>
+            <Link to="/private-charter" className="btn btn-outline btn-lg">
+              View All Charter Destinations
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ===== WHY CHOOSE ZIPLINE ===== */}
-      <section className="section" id="why-choose">
+      <section className="section section-alt" id="why-choose">
         <div className="container">
           <div className="text-center">
             <span className="section-label">Why Choose Us</span>
@@ -236,16 +277,16 @@ export default function Home() {
       </section>
 
       {/* ===== SAFETY SECTION ===== */}
-      <section className="section section-alt" id="safety-home">
+      <section className="section" id="safety-home">
         <div className="container">
           <div className="safety-section">
             <div className="safety-content">
               <span className="section-label">Our Commitment</span>
               <h2 className="section-title">Your Safety, Our Priority</h2>
               <p>
-                Zipline Express operates to the highest aviation standards. Our aircraft 
-                undergo rigorous maintenance checks, our crew undergoes regular training, 
-                and our operations are built around keeping you safe.
+                As an established airline operating since 2017, Zipline Express is built 
+                on a foundation of safety and reliability. Our operations prioritize 
+                regulatory compliance, experienced crew, and continuous improvement.
               </p>
               <div className="safety-points">
                 <div className="safety-point">
@@ -254,7 +295,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4>Rigorous Aircraft Maintenance</h4>
-                    <p>Every aircraft is maintained to manufacturer specifications and beyond.</p>
+                    <p>Maintained in accordance with manufacturer requirements by our Nassau-based provider, GES Aviation.</p>
                   </div>
                 </div>
                 <div className="safety-point">
@@ -263,7 +304,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4>Professional Operating Standards</h4>
-                    <p>All flights operate under strict safety protocols and regulatory compliance.</p>
+                    <p>All flights operate under strict safety protocols and Bahamian regulatory compliance.</p>
                   </div>
                 </div>
                 <div className="safety-point">
@@ -271,8 +312,8 @@ export default function Home() {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                   </div>
                   <div>
-                    <h4>Trained & Experienced Crew</h4>
-                    <p>Our pilots hold the highest certifications and undergo continuous training.</p>
+                    <h4>Experienced Crew</h4>
+                    <p>Our senior pilots bring over 20,000 combined flight hours of commercial aviation experience.</p>
                   </div>
                 </div>
               </div>
@@ -289,20 +330,20 @@ export default function Home() {
         <div className="container">
           <div className="stats-bar">
             <div className="stat-item">
-              <div className="stat-number">15+</div>
-              <div className="stat-label">Years of Service</div>
+              <div className="stat-number">32,400+</div>
+              <div className="stat-label">Passengers Transported</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">700+</div>
-              <div className="stat-label">Islands in The Bahamas</div>
+              <div className="stat-number">2,700+</div>
+              <div className="stat-label">Commercial Flights</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">2</div>
-              <div className="stat-label">Aircraft Types</div>
+              <div className="stat-number">2017</div>
+              <div className="stat-label">Operating Since</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">100%</div>
-              <div className="stat-label">Safety Commitment</div>
+              <div className="stat-number">20,000+</div>
+              <div className="stat-label">Combined Senior Pilot Hours</div>
             </div>
           </div>
         </div>

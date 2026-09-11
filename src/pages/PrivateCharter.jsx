@@ -9,7 +9,7 @@ export default function PrivateCharter() {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero-bg">
-          <img src={heroCharterImg} alt="Zipline Express private charter aircraft" />
+          <img src="/Landing Page Banner/improved_charter1.jpg" alt="Person enjoying a private getaway" />
         </div>
         <div className="hero-overlay"></div>
         <div className="page-hero-content">
@@ -28,14 +28,15 @@ export default function PrivateCharter() {
               <h2 className="section-title">Your Aircraft. Your Schedule.</h2>
               <p>
                 Zipline Express's private charter service gives you the freedom to fly 
-                where you want, when you want. Whether it's a business trip, a family vacation, 
-                or a special occasion, our team will tailor every aspect of your flight to 
-                your needs.
+                where you want, when you want. As an established operator with over 2,700 
+                commercial charter flights completed since 2017, we have the experience 
+                to tailor every aspect of your flight to your exact needs.
               </p>
               <p>
-                With experienced pilots, well-maintained aircraft, and a commitment to safety 
-                and professionalism, you can relax and enjoy the journey while we take care 
-                of the rest.
+                With senior pilots bringing over 20,000 combined flight hours, aircraft 
+                maintained to the highest manufacturer standards, and an unwavering 
+                commitment to safety, you can relax and enjoy the journey while we take 
+                care of the rest.
               </p>
               <div style={{ marginTop: 'var(--space-xl)' }}>
                 <Link to="/book-a-flight" className="btn btn-primary btn-lg" id="charter-request-cta">
@@ -57,68 +58,32 @@ export default function PrivateCharter() {
           <div className="text-center">
             <span className="section-label">Our Fleet</span>
             <h2 className="section-title">Aircraft</h2>
-            <p className="section-subtitle">
-              Choose the aircraft that suits your needs. Both aircraft are meticulously 
-              maintained and operated by experienced, professional crew.
+            <p className="section-subtitle" style={{ maxWidth: '800px', margin: '0 auto' }}>
+              Our fleet features Cessna 402 aircrafts. The Cessna 400 series aircraft is a proven and very dependable aircraft which, along with its range and passenger capacity, has made it a popular choice for many small regional airlines worldwide. Our planes are ideal for short routes and to connect from the islands to mainland hubs.
             </p>
           </div>
 
-          <div className="aircraft-grid">
+          <div className="aircraft-grid" style={{ maxWidth: '800px', margin: 'var(--space-2xl) auto 0' }}>
             {/* Cessna 402 */}
             <div className="aircraft-card" id="aircraft-cessna">
               <div className="aircraft-card-image">
                 <img src={heroMainImg} alt="Cessna 402 aircraft" />
-                <span className="aircraft-card-badge">Standard</span>
               </div>
               <div className="aircraft-card-body">
                 <h3>Cessna 402</h3>
-                <span className="aircraft-card-type">Twin-Engine Piston</span>
+                <span className="aircraft-card-type">Features</span>
                 <div className="aircraft-specs">
                   <div className="aircraft-spec">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    7 Passengers
+                    Up to 9 passengers' configuration
                   </div>
                   <div className="aircraft-spec">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg>
-                    Baggage Hold
+                    Short runway takeoff and landings
                   </div>
                   <div className="aircraft-spec">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1l5.6 3.4-3.2 3.2-2-.8c-.4-.2-.8 0-1.1.3l-.1.2c-.2.3-.1.7.1 1l2.3 2.3 2.3 2.3c.3.3.7.3 1 .1l.2-.1c.3-.2.5-.7.3-1.1l-.8-2 3.2-3.2 3.4 5.6c.2.4.7.5 1.1.3l.5-.3c.4-.2.6-.7.5-1.1z"/></svg>
-                    Pressurized Cabin
-                  </div>
-                  <div className="aircraft-spec">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                    200+ knots cruise
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* King Air */}
-            <div className="aircraft-card" id="aircraft-kingair">
-              <div className="aircraft-card-image">
-                <img src={heroCharterImg} alt="King Air turboprop aircraft" />
-                <span className="aircraft-card-badge">Premium</span>
-              </div>
-              <div className="aircraft-card-body">
-                <h3>King Air</h3>
-                <span className="aircraft-card-type">Turboprop — Premium Experience</span>
-                <div className="aircraft-specs">
-                  <div className="aircraft-spec">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    9 Passengers
-                  </div>
-                  <div className="aircraft-spec">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg>
-                    Large Baggage Hold
-                  </div>
-                  <div className="aircraft-spec">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1l5.6 3.4-3.2 3.2-2-.8c-.4-.2-.8 0-1.1.3l-.1.2c-.2.3-.1.7.1 1l2.3 2.3 2.3 2.3c.3.3.7.3 1 .1l.2-.1c.3-.2.5-.7.3-1.1l-.8-2 3.2-3.2 3.4 5.6c.2.4.7.5 1.1.3l.5-.3c.4-.2.6-.7.5-1.1z"/></svg>
-                    Pressurized Cabin
-                  </div>
-                  <div className="aircraft-spec">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                    260+ knots cruise
+                    Reduced cabin noise
                   </div>
                 </div>
               </div>

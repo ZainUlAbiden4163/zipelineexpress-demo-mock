@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import Logo from './Logo'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -37,13 +38,7 @@ export default function Navbar() {
       <div className="navbar-inner">
         {/* Logo */}
         <Link to="/" className="navbar-logo" aria-label="Zipline Express Home">
-          <svg className="navbar-logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="8" fill="#C8A84E" fillOpacity="0.15"/>
-            <path d="M12 28h24M14 24h20M16 32h16" stroke="#C8A84E" strokeWidth="1.5" strokeLinecap="round"/>
-            <path d="M24 10l-6 14h12l-6-14z" fill="#C8A84E" fillOpacity="0.3" stroke="#C8A84E" strokeWidth="1.5" strokeLinejoin="round"/>
-            <path d="M24 10v4M21 16h6" stroke="#C8A84E" strokeWidth="1.5" strokeLinecap="round"/>
-            <circle cx="24" cy="38" r="2" fill="#C8A84E"/>
-          </svg>
+          <Logo variant="primary" className="navbar-logo-icon" />
           <div className="navbar-logo-text">
             ZIPLINE
             <span>EXPRESS</span>

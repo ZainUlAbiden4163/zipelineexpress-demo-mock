@@ -7,7 +7,7 @@ export default function ScheduledFlights() {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero-bg">
-          <img src={heroScheduledImg} alt="Zipline Express scheduled passenger flights" />
+          <img src="/Landing Page Banner/improved_28660791.jpg" alt="Zipline Express scheduled passenger flights" />
         </div>
         <div className="hero-overlay"></div>
         <div className="page-hero-content">
@@ -133,6 +133,7 @@ export default function ScheduledFlights() {
                   <th>Departure</th>
                   <th>Arrival</th>
                   <th>Days</th>
+                  <th>Fare</th>
                   <th>Aircraft</th>
                   <th>Status</th>
                 </tr>
@@ -143,6 +144,7 @@ export default function ScheduledFlights() {
                   <td>8:00 AM</td>
                   <td>8:30 AM</td>
                   <td>Mon, Wed, Fri, Sun</td>
+                  <td>$125</td>
                   <td>Cessna 402</td>
                   <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
                 </tr>
@@ -151,6 +153,7 @@ export default function ScheduledFlights() {
                   <td>9:00 AM</td>
                   <td>9:30 AM</td>
                   <td>Mon, Wed, Fri, Sun</td>
+                  <td>$125</td>
                   <td>Cessna 402</td>
                   <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
                 </tr>
@@ -159,6 +162,7 @@ export default function ScheduledFlights() {
                   <td>3:00 PM</td>
                   <td>3:30 PM</td>
                   <td>Mon, Wed, Fri, Sun</td>
+                  <td>$125</td>
                   <td>Cessna 402</td>
                   <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
                 </tr>
@@ -167,6 +171,7 @@ export default function ScheduledFlights() {
                   <td>4:00 PM</td>
                   <td>4:30 PM</td>
                   <td>Mon, Wed, Fri, Sun</td>
+                  <td>$125</td>
                   <td>Cessna 402</td>
                   <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
                 </tr>
@@ -175,6 +180,7 @@ export default function ScheduledFlights() {
                   <td>9:00 AM</td>
                   <td>9:45 AM</td>
                   <td>Tue, Thu, Sat</td>
+                  <td>$145</td>
                   <td>Cessna 402</td>
                   <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
                 </tr>
@@ -183,6 +189,7 @@ export default function ScheduledFlights() {
                   <td>10:30 AM</td>
                   <td>11:15 AM</td>
                   <td>Tue, Thu, Sat</td>
+                  <td>$145</td>
                   <td>Cessna 402</td>
                   <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
                 </tr>
