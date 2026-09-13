@@ -64,9 +64,9 @@ export default function ScheduledFlights() {
                 </div>
               </div>
               <div style={{ padding: 'var(--space-xl)', paddingTop: 'var(--space-lg)' }}>
-                <Link to="/book-a-flight" className="btn btn-primary" style={{ width: '100%' }}>
+                <a href="https://www.zipline-express.com/book-a-flight" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: '100%' }}>
                   Book This Route
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -104,9 +104,9 @@ export default function ScheduledFlights() {
                 </div>
               </div>
               <div style={{ padding: 'var(--space-xl)', paddingTop: 'var(--space-lg)' }}>
-                <Link to="/book-a-flight" className="btn btn-primary" style={{ width: '100%' }}>
+                <a href="https://www.zipline-express.com/book-a-flight" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: '100%' }}>
                   Book This Route
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -265,9 +265,9 @@ export default function ScheduledFlights() {
               Fly with confidence across The Bahamas.
             </p>
             <div className="cta-banner-actions">
-              <Link to="/book-a-flight" className="btn btn-primary btn-lg" id="scheduled-book-cta">
+              <a href="https://www.zipline-express.com/book-a-flight" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg" id="scheduled-book-cta">
                 Book a Flight Now
-              </Link>
+              </a>
               <Link to="/travel-information" className="btn btn-secondary btn-lg">
                 Travel Information
               </Link>

@@ -39,10 +39,10 @@ export default function PrivateCharter() {
                 care of the rest.
               </p>
               <div style={{ marginTop: 'var(--space-xl)' }}>
-                <Link to="/book-a-flight" className="btn btn-primary btn-lg" id="charter-request-cta">
+                <a href="https://www.zipline-express.com/book-a-flight" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg" id="charter-request-cta">
                   Request a Charter
                   <svg className="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </Link>
+                </a>
               </div>
             </div>
             <div className="safety-image">
@@ -171,9 +171,9 @@ export default function PrivateCharter() {
               a tailored flight plan just for you.
             </p>
             <div className="cta-banner-actions">
-              <Link to="/book-a-flight" className="btn btn-primary btn-lg" id="charter-book-cta">
+              <a href="https://www.zipline-express.com/book-a-flight" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg" id="charter-book-cta">
                 Request a Charter
-              </Link>
+              </a>
               <Link to="/contact" className="btn btn-secondary btn-lg">
                 Contact Our Team
               </Link>
