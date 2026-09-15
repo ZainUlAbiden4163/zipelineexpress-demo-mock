@@ -39,10 +39,6 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="navbar-logo" aria-label="Zipline Express Home">
           <Logo variant="primary" className="navbar-logo-icon" />
-          <div className="navbar-logo-text">
-            ZIPLINE
-            <span>EXPRESS</span>
-          </div>
         </Link>
 
         {/* Desktop Navigation */}

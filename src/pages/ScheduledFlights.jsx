@@ -130,68 +130,26 @@ export default function ScheduledFlights() {
               <thead>
                 <tr>
                   <th>Route</th>
-                  <th>Departure</th>
-                  <th>Arrival</th>
-                  <th>Days</th>
-                  <th>Fare</th>
+                  <th>Flight Time</th>
                   <th>Aircraft</th>
+                  <th>Fare (per seat)</th>
                   <th>Status</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Freeport → Bimini</strong></td>
-                  <td>8:00 AM</td>
-                  <td>8:30 AM</td>
-                  <td>Mon, Wed, Fri, Sun</td>
-                  <td>$125</td>
+                  <td><strong>Freeport ⇄ Bimini</strong></td>
+                  <td>~30 min</td>
                   <td>Cessna 402</td>
-                  <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
+                  <td>Coming Soon</td>
+                  <td><span className="schedule-badge schedule-badge-active">● Coming Oct 5</span></td>
                 </tr>
                 <tr>
-                  <td><strong>Bimini → Freeport</strong></td>
-                  <td>9:00 AM</td>
-                  <td>9:30 AM</td>
-                  <td>Mon, Wed, Fri, Sun</td>
-                  <td>$125</td>
+                  <td><strong>Freeport ⇄ Marsh Harbour</strong></td>
+                  <td>~45 min</td>
                   <td>Cessna 402</td>
-                  <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Freeport → Bimini</strong></td>
-                  <td>3:00 PM</td>
-                  <td>3:30 PM</td>
-                  <td>Mon, Wed, Fri, Sun</td>
-                  <td>$125</td>
-                  <td>Cessna 402</td>
-                  <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Bimini → Freeport</strong></td>
-                  <td>4:00 PM</td>
-                  <td>4:30 PM</td>
-                  <td>Mon, Wed, Fri, Sun</td>
-                  <td>$125</td>
-                  <td>Cessna 402</td>
-                  <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Freeport → Marsh Harbour</strong></td>
-                  <td>9:00 AM</td>
-                  <td>9:45 AM</td>
-                  <td>Tue, Thu, Sat</td>
-                  <td>$145</td>
-                  <td>Cessna 402</td>
-                  <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Marsh Harbour → Freeport</strong></td>
-                  <td>10:30 AM</td>
-                  <td>11:15 AM</td>
-                  <td>Tue, Thu, Sat</td>
-                  <td>$145</td>
-                  <td>Cessna 402</td>
-                  <td><span className="schedule-badge schedule-badge-active">● Active</span></td>
+                  <td>Coming Soon</td>
+                  <td><span className="schedule-badge schedule-badge-active">● Coming Oct 5</span></td>
                 </tr>
               </tbody>
             </table>

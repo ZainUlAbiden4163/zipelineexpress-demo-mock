@@ -63,7 +63,7 @@ export default function Home() {
             {/* Scheduled Flights Card */}
             <div className="service-card" id="service-scheduled">
               <div className="service-card-image">
-                <img src={heroScheduledImg} alt="Zipline Express scheduled passenger flight" />
+                <img src="/Landing Page Banner/28660791_1595264923903721_3264508752249749504_o.jpg" alt="Zipline Express scheduled passenger flight" />
               </div>
               <div className="service-card-body">
                 <div className="service-card-icon">
@@ -84,7 +84,7 @@ export default function Home() {
             {/* Private Charter Card */}
             <div className="service-card" id="service-charter">
               <div className="service-card-image">
-                <img src={heroCharterImg} alt="Zipline Express private charter aircraft" />
+                <img src="/planes/king-air.jpeg" alt="Zipline Express private charter aircraft" />
               </div>
               <div className="service-card-body">
                 <div className="service-card-icon">
@@ -319,7 +319,7 @@ export default function Home() {
               </div>
             </div>
             <div className="safety-image">
-              <img src={heroAboutImg} alt="Zipline Express professional crew" />
+              <img src="/Landing Page Banner/charter1.jpg" alt="Zipline Express professional crew" />
             </div>
           </div>
         </div>

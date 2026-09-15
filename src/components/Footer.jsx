@@ -9,10 +9,6 @@ export default function Footer() {
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
               <Logo variant="primary" className="footer-logo-icon" />
-              <div className="footer-logo-text">
-                ZIPLINE
-                <span>EXPRESS</span>
-              </div>
             </Link>
             <p>
               An established Bahamian aviation company, operating since 2017. 

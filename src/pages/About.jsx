@@ -62,7 +62,7 @@ export default function About() {
               </p>
             </div>
             <div className="about-image">
-              <img src={heroMainImg} alt="Zipline Express aircraft over the Bahamas" />
+              <img src="/Landing Page Banner/charter1.jpg" alt="Zipline Express aircraft over the Bahamas" />
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function About() {
               </div>
             </div>
             <div className="about-image">
-              <img src={bahamasAerialImg} alt="Bahamas islands aerial view" />
+              <img src="/Landing Page Banner/28660791_1595264923903721_3264508752249749504_o.jpg" alt="Bahamas islands aerial view" />
             </div>
           </div>
         </div>
