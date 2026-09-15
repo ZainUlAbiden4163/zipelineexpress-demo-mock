@@ -1,162 +1,175 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import heroScheduledImg from '../assets/images/hero-scheduled.jpg'
+import heroCharterImg from '../assets/images/hero-charter.jpg'
 
 export default function BookFlight() {
+  const [formData, setFormData] = useState({
+    tripType: 'One way flight',
+    departureAirport: '',
+    departureDateTime: '',
+    firstTime: '',
+    aircraftPreference: '',
+    passengerCount: '',
+    fullName: '',
+    phone: '',
+    email: '',
+    specialRequests: ''
+  })
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const setAircraft = (aircraft) => {
+    setFormData({ ...formData, aircraftPreference: aircraft })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Handle form submission logic here
+    console.log(formData)
+    alert("Flight request submitted successfully! Our team will contact you shortly.")
+  }
+
   return (
-    <div className="page-enter">
+    <div className="page-enter" style={{ backgroundColor: 'var(--color-bg-alt)' }}>
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero-bg">
-          <img src={heroScheduledImg} alt="Book a flight with Zipline Express" />
+          <img src={heroCharterImg} alt="Book a flight with Zipline Express" />
         </div>
         <div className="hero-overlay"></div>
         <div className="page-hero-content">
           <span className="section-label" style={{ color: '#C8A84E' }}>Start Your Journey</span>
           <h1>Book a Flight</h1>
-          <p>Choose your service and start booking today</p>
+          <p>Request a charter and fly anywhere, anytime.</p>
         </div>
       </section>
 
-      {/* Booking Options */}
-      <section className="section" id="booking-options-section">
-        <div className="container">
-          <div className="text-center">
-            <span className="section-label">Choose Your Service</span>
-            <h2 className="section-title">How Would You Like to Fly?</h2>
-            <p className="section-subtitle">
-              Select the type of flight that suits your needs. Scheduled flights run on 
-              set routes and timetables. Private charters give you the freedom to fly 
-              anywhere, anytime.
-            </p>
-          </div>
+      {/* Form Section */}
+      <section className="section">
+        <div className="container" style={{ maxWidth: '800px' }}>
+          <div className="booking-form-container">
+            <h1 className="booking-form-title">BOOK YOUR FLIGHT</h1>
+            
+            <form onSubmit={handleSubmit} className="booking-form">
+              {/* Trip Type */}
+              <div className="booking-section">
+                <label className="booking-label">Trip Type *</label>
+                <div className="radio-group-vertical">
+                  <label className="radio-label">
+                    <input type="radio" name="tripType" value="One way flight" checked={formData.tripType === 'One way flight'} onChange={handleChange} />
+                    <span>One way flight</span>
+                  </label>
+                  <label className="radio-label">
+                    <input type="radio" name="tripType" value="Same-day return (up to 4 hours)" checked={formData.tripType === 'Same-day return (up to 4 hours)'} onChange={handleChange} />
+                    <span>Same-day return flight (up 4 hours on ground at destination)</span>
+                  </label>
+                  <label className="radio-label">
+                    <input type="radio" name="tripType" value="Same-day return (more than 4 hours)" checked={formData.tripType === 'Same-day return (more than 4 hours)'} onChange={handleChange} />
+                    <span>Same-day return flight (more than 4 hours on ground at destination)</span>
+                  </label>
+                </div>
+              </div>
 
-          <div className="booking-options">
-            {/* Scheduled Flight */}
-            <div className="booking-option-card" id="book-scheduled">
-              <div className="booking-option-icon">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <rect x="3" y="4" width="18" height="18" rx="2"/>
-                  <path d="M16 2v4M8 2v4M3 10h18"/>
-                  <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
-                </svg>
+              {/* Departure Airport */}
+              <div className="booking-section">
+                <label className="booking-label">Departure Airport</label>
+                <select name="departureAirport" value={formData.departureAirport} onChange={handleChange} className="booking-input">
+                  <option value="">Select departure airport</option>
+                  <option value="Nassau">Nassau (NAS)</option>
+                  <option value="Freeport">Freeport (FPO)</option>
+                  <option value="Marsh Harbour">Marsh Harbour (MHH)</option>
+                  <option value="Staniel Cay">Staniel Cay (TYM)</option>
+                </select>
               </div>
-              <h3>Scheduled Passenger Flight</h3>
-              <p>
-                Regular flights on set routes with published schedules and fares.<br/>
-                <strong style={{ color: 'var(--color-navy)' }}>
-                  Freeport ⇄ Bimini &nbsp;•&nbsp; Freeport ⇄ Marsh Harbour
-                </strong>
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)', alignItems: 'center' }}>
-                <a
-                  href="https://www.zipline-express.com/book-a-flight"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary btn-lg"
-                  id="book-scheduled-cta"
-                  style={{ width: '100%' }}
-                >
-                  Book a Scheduled Flight
-                  <svg className="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <Link to="/scheduled-flights" style={{ fontSize: 'var(--text-sm)', color: 'var(--color-gold)', fontWeight: 600 }}>
-                  View Schedules & Fares →
-                </Link>
-              </div>
-            </div>
 
-            {/* Private Charter */}
-            <div className="booking-option-card" id="book-charter">
-              <div className="booking-option-icon">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
+              {/* Departure Date & Time */}
+              <div className="booking-section">
+                <label className="booking-label">Departure date & time (Nassau time)</label>
+                <input type="datetime-local" name="departureDateTime" value={formData.departureDateTime} onChange={handleChange} className="booking-input" />
               </div>
-              <h3>Private Charter</h3>
-              <p>
-                Fly on your schedule to destinations throughout<br/>
-                <strong style={{ color: 'var(--color-navy)' }}>
-                  The Bahamas &nbsp;•&nbsp; Caribbean &nbsp;•&nbsp; Florida
-                </strong>
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)', alignItems: 'center' }}>
-                <a
-                  href="https://www.zipline-express.com/book-a-flight"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-navy btn-lg"
-                  id="book-charter-cta"
-                  style={{ width: '100%' }}
-                >
-                  Request a Charter
-                  <svg className="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <Link to="/private-charter" style={{ fontSize: 'var(--text-sm)', color: 'var(--color-gold)', fontWeight: 600 }}>
-                  Explore Charter Options →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* How Booking Works */}
-      <section className="section section-alt" id="booking-how">
-        <div className="container">
-          <div className="text-center">
-            <span className="section-label">Simple Process</span>
-            <h2 className="section-title">How Booking Works</h2>
-          </div>
+              {/* First time flying */}
+              <div className="booking-section">
+                <label className="booking-label">First time flying with us?</label>
+                <div className="radio-group-horizontal">
+                  <label className="radio-label">
+                    <input type="radio" name="firstTime" value="Yes" checked={formData.firstTime === 'Yes'} onChange={handleChange} />
+                    <span>Yes</span>
+                  </label>
+                  <label className="radio-label">
+                    <input type="radio" name="firstTime" value="No" checked={formData.firstTime === 'No'} onChange={handleChange} />
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
 
-          <div className="features-grid" style={{ maxWidth: '900px', margin: 'var(--space-2xl) auto 0' }}>
-            <div className="feature-card">
-              <div className="feature-icon" style={{ background: 'linear-gradient(135deg, var(--color-gold), var(--color-gold-light))', color: 'var(--color-navy)' }}>
-                <span style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-2xl)', fontWeight: 700 }}>1</span>
+              {/* Aircraft Preference */}
+              <div className="booking-section">
+                <label className="booking-label" style={{ fontSize: '18px', fontWeight: 'bold', color: 'var(--color-navy)' }}>Aircraft Preference</label>
+                <div className="aircraft-selection-grid">
+                  <div className={`aircraft-card ${formData.aircraftPreference === 'Cessna 402' ? 'selected' : ''}`} onClick={() => setAircraft('Cessna 402')}>
+                    <h4>Cessna 402</h4>
+                    <span className="aircraft-subtitle">Standard</span>
+                    <div className="aircraft-seats">7 seats</div>
+                  </div>
+                  <div className={`aircraft-card ${formData.aircraftPreference === 'King Air' ? 'selected' : ''}`} onClick={() => setAircraft('King Air')}>
+                    <h4>King Air</h4>
+                    <span className="aircraft-subtitle">Premium Experience</span>
+                    <div className="aircraft-seats">9 seats</div>
+                  </div>
+                </div>
               </div>
-              <h4>Choose Your Service</h4>
-              <p>Select whether you want a scheduled flight or a private charter above.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon" style={{ background: 'linear-gradient(135deg, var(--color-gold), var(--color-gold-light))', color: 'var(--color-navy)' }}>
-                <span style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-2xl)', fontWeight: 700 }}>2</span>
-              </div>
-              <h4>Select Your Flight</h4>
-              <p>Choose your route, date, number of passengers, and preferred aircraft.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon" style={{ background: 'linear-gradient(135deg, var(--color-gold), var(--color-gold-light))', color: 'var(--color-navy)' }}>
-                <span style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-2xl)', fontWeight: 700 }}>3</span>
-              </div>
-              <h4>Confirm & Fly</h4>
-              <p>Complete your booking, receive confirmation, and get ready to fly!</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Contact CTA */}
-      <section className="section" id="booking-help">
-        <div className="container">
-          <div className="text-center">
-            <h2 className="section-title">Need Help Booking?</h2>
-            <p className="section-subtitle">
-              Our team is available to assist you with booking, answer questions about 
-              routes and schedules, or help you plan your charter flight.
-            </p>
-            <div style={{ display: 'flex', gap: 'var(--space-xl)', justifyContent: 'center', flexWrap: 'wrap', marginTop: 'var(--space-xl)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                <a href="tel:+12425573498" style={{ fontWeight: 600, fontSize: 'var(--text-lg)', color: 'var(--color-navy)' }}>
-                  +1 (242) 557 3498
-                </a>
+              {/* Passenger count */}
+              <div className="booking-section">
+                <label className="booking-label">Passenger count</label>
+                <input type="number" name="passengerCount" placeholder="Select your aircraft preference first." value={formData.passengerCount} onChange={handleChange} className="booking-input" min="1" max={formData.aircraftPreference === 'Cessna 402' ? 7 : (formData.aircraftPreference === 'King Air' ? 9 : 9)} disabled={!formData.aircraftPreference} />
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <a href="mailto:info@zipline-express.com" style={{ fontWeight: 600, fontSize: 'var(--text-lg)', color: 'var(--color-navy)' }}>
-                  info@zipline-express.com
-                </a>
+
+              {/* Contact */}
+              <div className="booking-section">
+                <label className="booking-label" style={{ fontSize: '18px', fontWeight: 'bold', color: 'var(--color-navy)' }}>Contact</label>
+                <div className="form-row-2">
+                  <div className="form-group-inner">
+                    <label className="booking-sublabel">Full name</label>
+                    <input type="text" name="fullName" placeholder="Your full name" value={formData.fullName} onChange={handleChange} className="booking-input" required />
+                  </div>
+                  <div className="form-group-inner">
+                    <label className="booking-sublabel">Phone or WhatsApp</label>
+                    <div className="phone-input-wrapper">
+                      <span className="phone-prefix">🇺🇸 +1</span>
+                      <input type="tel" name="phone" placeholder="555 123 4567" value={formData.phone} onChange={handleChange} className="booking-input" required />
+                    </div>
+                  </div>
+                </div>
+                <div className="form-group-inner" style={{ marginTop: '15px' }}>
+                  <label className="booking-sublabel">Email</label>
+                  <input type="email" name="email" placeholder="you@example.com" value={formData.email} onChange={handleChange} className="booking-input" required />
+                </div>
               </div>
-            </div>
+
+              {/* Special Requests */}
+              <div className="booking-section">
+                <label className="booking-label" style={{ fontSize: '18px', fontWeight: 'bold', color: 'var(--color-navy)' }}>Special Requests</label>
+                <textarea name="specialRequests" placeholder="Any special requests for the operator: pets, catering, etc" value={formData.specialRequests} onChange={handleChange} className="booking-input" rows="4"></textarea>
+              </div>
+
+              {/* Flight Quote */}
+              <div className="booking-section">
+                <label className="booking-label" style={{ fontSize: '18px', fontWeight: 'bold', color: 'var(--color-navy)' }}>Flight Quote</label>
+                <div className="quote-box">
+                  <div className="quote-title">Booking details</div>
+                  <div className="quote-row">
+                    <span className="quote-label">Trip type</span>
+                    <span className="quote-val">{formData.tripType || '-'}</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" className="btn-submit-booking">Submit flight request</button>
+            </form>
           </div>
         </div>
       </section>

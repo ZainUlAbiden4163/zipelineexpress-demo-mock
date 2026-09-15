@@ -1802,13 +1802,43 @@
 }
 
 .island-accordion-row {
-  display: grid;
-  grid-template-columns: 1fr 100px 100px;
+  display: flex;
+  justify-content: space-between;
   gap: var(--space-sm);
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-sm);
   transition: background 0.15s ease;
   align-items: center;
+}
+
+.island-accordion-planes {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.plane-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+
+.plane-badge.king-air {
+  background-color: rgba(30, 61, 89, 0.05);
+  color: var(--color-navy);
+  border-color: rgba(30, 61, 89, 0.2);
+}
+
+.plane-badge.cessna {
+  background-color: rgba(200, 168, 78, 0.1);
+  color: #a0812d; /* slightly darker gold for readability */
+  border-color: rgba(200, 168, 78, 0.4);
 }
 
 .island-accordion-row:hover {
@@ -1858,7 +1888,6 @@
   }
 
   .island-accordion-row {
-    grid-template-columns: 1fr 80px 80px;
     padding: var(--space-xs) var(--space-sm);
   }
 
@@ -1965,5 +1994,240 @@
   .experience-tall, .experience-wide {
     grid-row: span 1;
     grid-column: span 1;
+  }
+}
+
+/* ===== NEW BOOKING FORM ===== */
+.booking-form-container {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl) var(--space-xl);
+  box-shadow: var(--shadow-xl);
+  margin-bottom: var(--space-4xl);
+}
+
+.booking-form-title {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--text-2xl);
+  color: var(--color-navy);
+  margin-bottom: var(--space-2xl);
+  border-bottom: 2px solid var(--color-gold);
+  padding-bottom: var(--space-sm);
+  display: inline-block;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.booking-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.booking-label {
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+}
+
+.booking-sublabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.radio-group-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.radio-group-horizontal {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+
+.radio-label input[type="radio"] {
+  accent-color: var(--color-navy);
+  width: 18px;
+  height: 18px;
+}
+
+.booking-input {
+  width: 100%;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-base);
+  font-family: inherit;
+  background-color: var(--color-bg-alt);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-input:focus {
+  outline: none;
+  border-color: var(--color-navy);
+  box-shadow: 0 0 0 3px rgba(11, 29, 58, 0.1);
+  background-color: white;
+}
+
+.aircraft-selection-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.aircraft-card {
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+.aircraft-card:hover {
+  border-color: var(--color-gold-light);
+  transform: translateY(-2px);
+}
+
+.aircraft-card.selected {
+  border-color: var(--color-navy);
+  background-color: rgba(11, 29, 58, 0.03);
+  box-shadow: 0 4px 12px rgba(11, 29, 58, 0.1);
+}
+
+.aircraft-card h4 {
+  margin: 0 0 4px 0;
+  font-size: var(--text-lg);
+  color: var(--color-navy);
+}
+
+.aircraft-subtitle {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.aircraft-seats {
+  display: inline-block;
+  background-color: var(--color-bg-alt);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-alt);
+  overflow: hidden;
+}
+
+.phone-input-wrapper:focus-within {
+  border-color: var(--color-navy);
+  box-shadow: 0 0 0 3px rgba(11, 29, 58, 0.1);
+  background-color: white;
+}
+
+.phone-prefix {
+  padding: 0 var(--space-md);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  background-color: var(--color-bg-alt);
+  border-right: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.phone-input-wrapper .booking-input {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.quote-box {
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+}
+
+.quote-title {
+  font-weight: 700;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.quote-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quote-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.quote-val {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-navy);
+}
+
+.btn-submit-booking {
+  background-color: var(--color-navy);
+  color: white;
+  padding: var(--space-md) var(--space-xl);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-base);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: var(--space-xl);
+}
+
+.btn-submit-booking:hover {
+  background-color: var(--color-navy-light);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .aircraft-selection-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row-2 {
+    grid-template-columns: 1fr;
   }
 }

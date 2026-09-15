@@ -140,16 +140,13 @@ function IslandAccordion({ island, airports, isOpen, onToggle }) {
       </button>
       {isOpen && (
         <div className="island-accordion-body">
-          <div className="island-accordion-table-header">
-            <span>Airport</span>
-            <span>King Air</span>
-            <span>Cessna 402</span>
-          </div>
           {airports.map((airport) => (
             <div className="island-accordion-row" key={airport.name}>
               <span className="island-accordion-airport">{airport.name}</span>
-              <span className={`island-accordion-price ${airport.kingAir === 'N/A' ? 'island-accordion-na' : ''}`}>{airport.kingAir}</span>
-              <span className="island-accordion-price">{airport.cessna}</span>
+              <div className="island-accordion-planes">
+                {airport.kingAir !== 'N/A' && <span className="plane-badge king-air">King Air</span>}
+                {airport.cessna !== 'N/A' && <span className="plane-badge cessna">Cessna 402</span>}
+              </div>
             </div>
           ))}
         </div>
@@ -210,10 +207,10 @@ export default function PrivateCharter() {
                 care of the rest.
               </p>
               <div style={{ marginTop: 'var(--space-xl)' }}>
-                <a href="https://www.zipline-express.com/book-a-flight" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg" id="charter-request-cta">
+                <Link to="/book-a-flight" className="btn btn-primary btn-lg" id="charter-request-cta">
                   Request a Charter
                   <svg className="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="safety-image">
@@ -292,11 +289,11 @@ export default function PrivateCharter() {
       <section className="section" id="charter-destinations">
         <div className="container">
           <div className="text-center">
-            <span className="section-label">Destinations & Pricing</span>
+            <span className="section-label">Destinations</span>
             <h2 className="section-title">Where Can You Fly?</h2>
             <p className="section-subtitle">
               Our charter services cover {charterDestinations.length} islands across The Bahamas with 
-              over 40 airport destinations. All prices are per aircraft (one-way from Nassau).
+              over 40 airport destinations.
             </p>
           </div>
 
@@ -334,7 +331,6 @@ export default function PrivateCharter() {
           </div>
 
           <p style={{ textAlign: 'center', marginTop: 'var(--space-xl)', color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>
-            All prices are for the entire aircraft charter from Nassau (one-way). Prices are subject to change. 
             Destination availability depends on aircraft type, weather, and regulatory requirements. 
             Contact us for custom route enquiries.
           </p>
@@ -504,9 +500,9 @@ export default function PrivateCharter() {
               a tailored flight plan just for you.
             </p>
             <div className="cta-banner-actions">
-              <a href="https://www.zipline-express.com/book-a-flight" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg" id="charter-book-cta">
+              <Link to="/book-a-flight" className="btn btn-primary btn-lg" id="charter-book-cta">
                 Request a Charter
-              </a>
+              </Link>
               <Link to="/contact" className="btn btn-secondary btn-lg">
                 Contact Our Team
               </Link>
