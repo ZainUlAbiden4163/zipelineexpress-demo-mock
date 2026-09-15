@@ -108,16 +108,16 @@ export default function BookFlight() {
               {/* Aircraft Preference */}
               <div className="booking-section">
                 <label className="booking-label" style={{ fontSize: '18px', fontWeight: 'bold', color: 'var(--color-navy)' }}>Aircraft Preference</label>
-                <div className="aircraft-selection-grid">
-                  <div className={`aircraft-card ${formData.aircraftPreference === 'Cessna 402' ? 'selected' : ''}`} onClick={() => setAircraft('Cessna 402')}>
+                <div className="booking-aircraft-selection-grid">
+                  <div className={`booking-aircraft-card ${formData.aircraftPreference === 'Cessna 402' ? 'selected' : ''}`} onClick={() => setAircraft('Cessna 402')}>
                     <h4>Cessna 402</h4>
-                    <span className="aircraft-subtitle">Standard</span>
-                    <div className="aircraft-seats">7 seats</div>
+                    <span className="booking-aircraft-subtitle">Standard</span>
+                    <div className="booking-aircraft-seats">7 seats</div>
                   </div>
-                  <div className={`aircraft-card ${formData.aircraftPreference === 'King Air' ? 'selected' : ''}`} onClick={() => setAircraft('King Air')}>
+                  <div className={`booking-aircraft-card ${formData.aircraftPreference === 'King Air' ? 'selected' : ''}`} onClick={() => setAircraft('King Air')}>
                     <h4>King Air</h4>
-                    <span className="aircraft-subtitle">Premium Experience</span>
-                    <div className="aircraft-seats">9 seats</div>
+                    <span className="booking-aircraft-subtitle">Premium Experience</span>
+                    <div className="booking-aircraft-seats">9 seats</div>
                   </div>
                 </div>
               </div>
