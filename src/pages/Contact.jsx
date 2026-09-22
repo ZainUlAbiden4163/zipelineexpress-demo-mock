@@ -23,7 +23,7 @@ export default function Contact() {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero-bg">
-          <img src="/Landing Page Banner/improved_ships.jpg" alt="Zipline Express customer service" />
+          <img src="/Landing Page Banner/customer-service-banner.jpg" alt="Zipline Express customer service" />
         </div>
         <div className="hero-overlay"></div>
         <div className="page-hero-content">
@@ -74,7 +74,9 @@ export default function Contact() {
                     Jet Nassau<br/>
                     Coral Harbour Road Suite<br/>
                     #1 Lynden Pindling International Airport<br/>
-                    Nassau N.P, The Bahamas
+                    Nassau N.P, The Bahamas<br/><br/>
+                    Grand Bahama International Airport<br/>
+                    Freeport, Bahamas
                   </p>
                 </div>
               </div>
@@ -86,9 +88,7 @@ export default function Contact() {
                 <div>
                   <h4>Office Hours</h4>
                   <p>
-                    Monday – Friday: 8:00 AM – 5:00 PM<br/>
-                    Saturday: 8:00 AM – 12:00 PM<br/>
-                    Sunday: Closed (flights operate)
+                    Monday – Sunday: 6:00 a.m. – 5:00 p.m.
                   </p>
                 </div>
               </div>

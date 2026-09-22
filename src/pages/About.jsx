@@ -34,7 +34,7 @@ export default function About() {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero-bg">
-          <img src="/Landing Page Banner/improved_cessna.jpg" alt="Zipline Express crew" />
+          <img src="/planes/king-air-5-banner.jpeg" alt="Zipline Express King Air" />
         </div>
         <div className="hero-overlay"></div>
         <div className="page-hero-content">
@@ -62,7 +62,7 @@ export default function About() {
               </p>
             </div>
             <div className="about-image">
-              <img src="/Landing Page Banner/charter1.jpg" alt="Zipline Express aircraft over the Bahamas" />
+              <img src="/Landing Page Banner/zipline-cessna-tarmac.jpg" alt="Zipline Express aircraft over the Bahamas" />
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function About() {
               </div>
             </div>
             <div className="about-image">
-              <img src="/Landing Page Banner/28660791_1595264923903721_3264508752249749504_o.jpg" alt="Bahamas islands aerial view" />
+              <img src="/planes/king-air-4.jpeg" alt="Zipline Express King Air" />
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ export default function ScheduledFlights() {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero-bg">
-          <img src="/Landing Page Banner/improved_28660791.jpg" alt="Zipline Express scheduled passenger flights" />
+          <img src="/planes/king-air-3.jpeg" alt="Zipline Express scheduled passenger flights" />
         </div>
         <div className="hero-overlay"></div>
         <div className="page-hero-content">
@@ -64,9 +64,9 @@ export default function ScheduledFlights() {
                 </div>
               </div>
               <div style={{ padding: 'var(--space-xl)', paddingTop: 'var(--space-lg)' }}>
-                <Link to="/book-a-flight" className="btn btn-primary" style={{ width: '100%' }}>
+                <a href="#ticketing-system" className="btn btn-primary" style={{ width: '100%' }}>
                   Book This Route
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -104,9 +104,9 @@ export default function ScheduledFlights() {
                 </div>
               </div>
               <div style={{ padding: 'var(--space-xl)', paddingTop: 'var(--space-lg)' }}>
-                <Link to="/book-a-flight" className="btn btn-primary" style={{ width: '100%' }}>
+                <a href="#ticketing-system" className="btn btn-primary" style={{ width: '100%' }}>
                   Book This Route
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -175,11 +175,11 @@ export default function ScheduledFlights() {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg>
               </div>
               <h3>Baggage</h3>
-              <p>Each passenger is allowed one carry-on bag and one checked bag. Weight limits apply to ensure safe aircraft operation.</p>
+              <p>Each passenger may check up to two (2) bags (max 40 lbs for first free bag) and bring one carry-on (max 10 lbs) plus a personal item.</p>
               <ul>
-                <li>Carry-on: 1 small bag (max 15 lbs)</li>
-                <li>Checked: 1 bag (max 30 lbs)</li>
-                <li>Excess baggage subject to availability and fees</li>
+                <li>Carry-on: 1 bag (max 10 lbs) + 1 personal item</li>
+                <li>Checked: 1st bag free (up to 40 lbs), 2nd bag $25 (up to 40 lbs)</li>
+                <li>Overweight bags incur additional fees. Max 60 lbs per bag.</li>
               </ul>
             </div>
 
@@ -188,10 +188,10 @@ export default function ScheduledFlights() {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
               </div>
               <h3>Check-in</h3>
-              <p>Arrive at the airport at least 30 minutes before your scheduled departure for check-in and boarding.</p>
+              <p>Arrive at the airport at least 45 minutes before your scheduled departure for check-in and boarding.</p>
               <ul>
                 <li>Bring a valid photo ID</li>
-                <li>Check-in closes 15 minutes before departure</li>
+                <li>Check-in closes 30 minutes before departure</li>
                 <li>Keep your booking confirmation handy</li>
               </ul>
             </div>
@@ -206,7 +206,6 @@ export default function ScheduledFlights() {
                 <li>Flights are subject to weather conditions</li>
                 <li>Follow crew instructions at all times</li>
                 <li>No smoking on any Zipline Express flight</li>
-                <li>Contact us if running late</li>
               </ul>
             </div>
           </div>
@@ -223,9 +222,9 @@ export default function ScheduledFlights() {
               Fly with confidence across The Bahamas.
             </p>
             <div className="cta-banner-actions">
-              <Link to="/book-a-flight" className="btn btn-primary btn-lg" id="scheduled-book-cta">
+              <a href="#ticketing-system" className="btn btn-primary btn-lg" id="scheduled-book-cta">
                 Book a Scheduled Flight
-              </Link>
+              </a>
               <Link to="/travel-information" className="btn btn-secondary btn-lg">
                 Travel Information
               </Link>

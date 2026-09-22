@@ -21,7 +21,7 @@ export default function Home() {
       {/* ===== HERO ===== */}
       <section className="hero" id="home-hero">
         <div className="hero-bg">
-          <img src="/Landing%20Page%20Banner/staniel-cay-bahamas-flights-tours%20copy.jpg" alt="Zipline Express aircraft flying over the Bahamas" />
+          <img src="/Landing%20Page%20Banner/zipline-aircraft-flying.jpg" alt="Zipline Express aircraft flying over the Bahamas" />
         </div>
         <div className="hero-overlay"></div>
         <div className="hero-content">
@@ -63,7 +63,7 @@ export default function Home() {
             {/* Scheduled Flights Card */}
             <div className="service-card" id="service-scheduled">
               <div className="service-card-image">
-                <img src="/planes/scheduled-flight-generated.jpg" alt="Zipline Express scheduled passenger flight" />
+                <img src="/planes/king-air-2.jpeg" alt="Zipline Express scheduled passenger flight" />
               </div>
               <div className="service-card-body">
                 <div className="service-card-icon">
@@ -319,7 +319,7 @@ export default function Home() {
               </div>
             </div>
             <div className="safety-image">
-              <img src="/Landing Page Banner/charter1.jpg" alt="Zipline Express professional crew" />
+              <img src="/planes/king-air-1.jpeg" alt="Zipline Express professional crew" />
             </div>
           </div>
         </div>

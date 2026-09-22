@@ -214,7 +214,7 @@ export default function PrivateCharter() {
               </div>
             </div>
             <div className="safety-image">
-              <img src="/Landing Page Banner/charter1.jpg" alt="Zipline Express Cessna on the tarmac" />
+              <img src="/Landing Page Banner/zipline-cessna-tarmac.jpg" alt="Zipline Express Cessna on the tarmac" />
             </div>
           </div>
         </div>
@@ -351,7 +351,7 @@ export default function PrivateCharter() {
 
           <div className="experiences-grid">
             <div className="experience-card experience-tall">
-              <img src="/experiences/IMG_0519.jpeg" alt="Swimming with Pigs in Exuma" />
+              <img src="/experiences/swimming-with-pigs.jpeg" alt="Swimming with Pigs in Exuma" />
               <div className="experience-overlay">
                 <h3>Swimming with Pigs</h3>
                 <span>Exuma Cays</span>
@@ -367,7 +367,7 @@ export default function PrivateCharter() {
             </div>
 
             <div className="experience-card">
-              <img src="/experiences/JoelWestsideBone-1920_edited_edited.jpg" alt="World-Class Bonefishing" />
+              <img src="/experiences/world-class-bonefishing.jpg" alt="World-Class Bonefishing" />
               <div className="experience-overlay">
                 <h3>World-Class Bonefishing</h3>
                 <span>Andros</span>
@@ -375,7 +375,7 @@ export default function PrivateCharter() {
             </div>
 
             <div className="experience-card experience-wide">
-              <img src="/experiences/jakob-owens-VkpFJzV455I-unsplash.jpg" alt="Luxury Resorts & Beaches" />
+              <img src="/experiences/luxury-resorts-beaches.jpg" alt="Luxury Resorts & Beaches" />
               <div className="experience-overlay">
                 <h3>Luxury Resorts</h3>
                 <span>Bimini</span>
@@ -383,7 +383,7 @@ export default function PrivateCharter() {
             </div>
 
             <div className="experience-card">
-              <img src="/experiences/IMG-0014.jpg" alt="Crystal Clear Waters" />
+              <img src="/experiences/crystal-clear-waters.jpg" alt="Crystal Clear Waters" />
               <div className="experience-overlay">
                 <h3>Crystal Clear Waters</h3>
                 <span>Abaco Islands</span>
@@ -391,7 +391,7 @@ export default function PrivateCharter() {
             </div>
 
             <div className="experience-card">
-              <img src="/experiences/claude-piche-205364-unsplash.jpg" alt="Pink Sand Beaches" />
+              <img src="/experiences/pink-sand-beaches.jpg" alt="Pink Sand Beaches" />
               <div className="experience-overlay">
                 <h3>Pink Sand Beaches</h3>
                 <span>Eleuthera</span>
@@ -399,7 +399,7 @@ export default function PrivateCharter() {
             </div>
 
             <div className="experience-card experience-tall">
-              <img src="/experiences/IMG_0548.jpeg" alt="Island Adventures" />
+              <img src="/experiences/island-adventures.jpeg" alt="Island Adventures" />
               <div className="experience-overlay">
                 <h3>Island Adventures</h3>
                 <span>The Out Islands</span>
@@ -407,7 +407,7 @@ export default function PrivateCharter() {
             </div>
 
             <div className="experience-card experience-wide">
-              <img src="/experiences/jakob-owens-300988-unsplash.jpg" alt="Tropical Escapes" />
+              <img src="/experiences/tropical-escapes.jpg" alt="Tropical Escapes" />
               <div className="experience-overlay">
                 <h3>Tropical Escapes</h3>
                 <span>Cat Island</span>
@@ -415,7 +415,7 @@ export default function PrivateCharter() {
             </div>
 
             <div className="experience-card">
-              <img src="/experiences/46395bd3-00ab-4b2e-9a4b-652b9acf2856.jpeg" alt="Secluded Coves" />
+              <img src="/experiences/secluded-coves.jpeg" alt="Secluded Coves" />
               <div className="experience-overlay">
                 <h3>Secluded Coves</h3>
                 <span>Berry Islands</span>
@@ -423,7 +423,7 @@ export default function PrivateCharter() {
             </div>
 
             <div className="experience-card">
-              <img src="/experiences/IMG_4723.jpeg" alt="Marine Life" />
+              <img src="/experiences/marine-life.jpeg" alt="Marine Life" />
               <div className="experience-overlay">
                 <h3>Marine Life</h3>
                 <span>Long Island</span>
@@ -431,7 +431,7 @@ export default function PrivateCharter() {
             </div>
 
             <div className="experience-card">
-              <img src="/experiences/d1385fd5-ab64-42c3-8c5f-7f7cb3120a20.jpeg" alt="Pristine Coastlines" />
+              <img src="/experiences/pristine-coastlines.jpeg" alt="Pristine Coastlines" />
               <div className="experience-overlay">
                 <h3>Pristine Coastlines</h3>
                 <span>San Salvador</span>
@@ -439,7 +439,7 @@ export default function PrivateCharter() {
             </div>
 
             <div className="experience-card experience-wide">
-              <img src="/experiences/oliver-sjostrom-iSrBg45UCaM-unsplash_edited.jpg" alt="Private Island Retreats" />
+              <img src="/experiences/private-island-retreats.jpg" alt="Private Island Retreats" />
               <div className="experience-overlay">
                 <h3>Private Island Retreats</h3>
                 <span>Exuma Cays</span>

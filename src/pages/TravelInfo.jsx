@@ -16,15 +16,11 @@ export default function TravelInfo() {
     },
     {
       question: 'How early should I arrive at the airport?',
-      answer: 'We recommend arriving at least 30 minutes before your scheduled departure time. Check-in closes 15 minutes before departure. Late arrivals may not be able to board.'
+      answer: 'We recommend arriving at least 45 minutes before your scheduled departure time. Check-in closes 30 minutes before departure. Late arrivals may not be able to board.'
     },
     {
       question: 'What is the baggage allowance?',
-      answer: 'Each passenger is allowed one carry-on bag (max 15 lbs) and one checked bag (max 30 lbs). Due to aircraft weight and space limitations, excess baggage is subject to availability and additional fees. Please contact us in advance if you need to bring extra baggage.'
-    },
-    {
-      question: 'Can I bring special items (surfboards, fishing gear, etc.)?',
-      answer: 'Oversized or specialty items may be accommodated depending on availability and aircraft capacity. Please contact us at least 24 hours before your flight so we can make arrangements.'
+      answer: 'Each passenger is permitted one carry-on bag (max 10 lbs) and one personal item. Passengers may check up to two bags. The first checked bag is free up to 40 lbs. A second checked bag is $25 (up to 40 lbs). Overweight bags incur additional fees and bags over 60 lbs are not accepted. Excess baggage is subject to available aircraft capacity.'
     },
     {
       question: 'What happens if my flight is cancelled due to weather?',
@@ -36,11 +32,11 @@ export default function TravelInfo() {
     },
     {
       question: 'Is there food or drink service on board?',
-      answer: 'Due to the short duration of our flights, we do not provide an in-flight meal service. You are welcome to bring your own snacks and non-alcoholic beverages.'
+      answer: 'Due to the short duration of our flights, we do not provide an in-flight meal service.'
     },
     {
       question: 'Are children allowed to fly?',
-      answer: 'Yes, children of all ages are welcome. Children under 2 may travel on an adult\'s lap. Child seats are not required but may be brought if desired. All children must be accompanied by an adult.'
+      answer: 'Yes, children of all ages are welcome. Children under 2 may travel on an adult\'s lap. All children must be accompanied by an adult.'
     },
   ]
 
@@ -49,7 +45,7 @@ export default function TravelInfo() {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero-bg">
-          <img src="/Landing Page Banner/improved_person_rock.jpg" alt="Bahamas islands aerial view" />
+          <img src="/Landing Page Banner/travel-info-banner.jpg" alt="Bahamas islands aerial view" />
         </div>
         <div className="hero-overlay"></div>
         <div className="page-hero-content">
@@ -92,11 +88,11 @@ export default function TravelInfo() {
               </div>
               <h3>Baggage Guidelines</h3>
               <ul>
-                <li>1 carry-on bag (max 15 lbs / 7 kg)</li>
-                <li>1 checked bag (max 30 lbs / 14 kg)</li>
+                <li>1 carry-on bag (max 10 lbs) + 1 personal item</li>
+                <li>Checked: Up to 2 bags (max 40 lbs for first free bag)</li>
                 <li>Soft-sided bags preferred</li>
                 <li>No hazardous materials</li>
-                <li>Excess baggage by arrangement only</li>
+                <li>Overweight/excess baggage subject to fees and availability</li>
               </ul>
             </div>
 
@@ -106,8 +102,8 @@ export default function TravelInfo() {
               </div>
               <h3>Check-in & Boarding</h3>
               <ul>
-                <li>Arrive 30 minutes before departure</li>
-                <li>Check-in closes 15 minutes before</li>
+                <li>Arrive 45 minutes before departure</li>
+                <li>Check-in closes 30 minutes before</li>
                 <li>Present photo ID at check-in</li>
                 <li>Listen to crew safety briefing</li>
                 <li>Follow all crew instructions</li>

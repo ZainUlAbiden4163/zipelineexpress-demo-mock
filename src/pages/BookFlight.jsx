@@ -36,7 +36,7 @@ export default function BookFlight() {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="hero-bg">
-          <img src={heroCharterImg} alt="Book a flight with Zipline Express" />
+          <img src="/planes/king-air-takeoff-banner.jpeg" alt="Zipline Express King Air taking off" />
         </div>
         <div className="hero-overlay"></div>
         <div className="page-hero-content">
